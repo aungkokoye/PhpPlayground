@@ -1,0 +1,13 @@
+version: "2"
+services:
+  webapp:
+    build:
+      context: .
+    ports:
+      - 8950:80
+    container_name: playground_webapp
+    volumes:
+      - ./src:/var/www/html
+      - ./vhost/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    environment:
+      XDEBUG_CONFIG: remote_host=192.168.0.18

@@ -1,0 +1,55 @@
+Xdebug installation
+
+URL :  https://dev.to/jackmiras/xdebug-in-phpstorm-with-docker-2al8
+
+----------------------------------------------------------------------------------------------------
+
+Chrome setup
+
+Need to install Xdebug helper extension and enable
+
+Setting | Extensions | Xdebug helper | Detail | Extensions Options | IDE KEY |
+
+Select as PhpStorm => PHPSTORM
+
+----------------------------------------------------------------------------------------------------
+
+PHPSTORM IDE
+
+Preferences | Build, Execution, Deployment | Docker
+
+connection successful should show
+
+Preferences | PHP | Debug | DBGp Proxy
+
+IDE KEY : PHPSTORM
+HOST    : Your host machine IP <$ipconfig getifaddr en0>
+PORT    : 9000
+
+Preferences | PHP | Servers
+
+click +
+
+Name    : <php-playground>
+Host    : localhost
+Port    : <according to docker-compose.yml, docker output port to host machine >
+Debugger: Xdebug
+
+check Use path mappings, according to your docker container path
+
+Top right, click dropdown Edit Configurations
+
+Select PHP Remote Debug
+
+click +
+
+Name : Docker
+
+check Filter debug connection by IDE key
+
+Sever                   : <php-playground>
+IDE key (session id)    : PHPSTORM
+
+**
+click in he indicated button, and the debug button
+
