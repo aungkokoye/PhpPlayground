@@ -1,0 +1,17 @@
+{
+    "name": "aung.ye/src",
+    "autoload": {
+        "psr-4": {
+            "AungYe\\Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aung Ko Ko Ye",
+            "email": "aung.ye@dvcorporate.com"
+        }
+    ],
+    "require": {
+        "aman00323/emailchecker": "^2.2"
+    }
+}

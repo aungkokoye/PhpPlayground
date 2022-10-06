@@ -1,12 +1,16 @@
 <?php
 
+require __DIR__ . '/vendor/autoload.php';
+
+use Aman\EmailVerifier\EmailChecker;
+
+$emailChecker = new EmailChecker();
+
+$email = "example@gmail.com";
+
+$emailChecker->setFromEmail($email);
+
+var_dump($emailChecker->checkMxAndDnsRecord("rafal.skucha+123@hotmail.co.uk"));
+
+
 echo 'w r here';
-
-$array = [1,2,3,4,5];
-
-foreach($array as $key => $value) {
-    var_dump($key);
-    var_dump($value);
-}
-
-echo phpinfo();

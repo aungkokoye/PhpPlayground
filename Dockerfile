@@ -15,3 +15,6 @@ RUN echo "zend_extension=xdebug.so" >> /usr/local/etc/php/conf.d/xdebug.ini  \
 
 RUN docker-php-ext-install mbstring zip gd pdo_mysql mysqli
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN a2enmod rewrite

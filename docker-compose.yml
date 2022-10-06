@@ -4,7 +4,7 @@ services:
     build:
       context: .
     ports:
-      - 8950:80
+      - 8111:80
     container_name: playground_webapp
     volumes:
       - ./src:/var/www/html
